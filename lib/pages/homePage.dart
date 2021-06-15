@@ -78,7 +78,6 @@ class HomePage extends StatelessWidget {
     'HINDUNILVR': 'Hindustan Unilever Ltd.',
     'ICICIBANK': 'ICICI Bank Ltd.',
     'INDUSINDBK': 'IndusInd Bank Ltd.',
-    'INFRATEL': 'Bharti Infratel Ltd.',
     'INFY': 'Infosys Ltd.',
     'IOC': 'Indian Oil Corporation Ltd.',
     'ITC': 'ITC Ltd.',
@@ -126,6 +125,7 @@ class HomePage extends StatelessWidget {
           itemCount: stockList.length,
           itemBuilder: (context, index) {
             return ListTile(
+              leading: Icon(Icons.add),
               title: Text('${stockDict[stockList[index]]}'),
               subtitle: Text('${stockList[index]}'),
               onTap: () {
