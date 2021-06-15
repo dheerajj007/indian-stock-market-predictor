@@ -15,9 +15,12 @@ class CompanyPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        leading: Icon(
-          Icons.arrow_back_ios,
-          color: Colors.black,
+        leading: IconButton(
+          icon: Icon(
+            Icons.cancel_outlined,
+            color: Colors.black,
+          ),
+          onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(name, style: TextStyle(color: Colors.black)),
         backgroundColor: Colors.white,
@@ -32,17 +35,17 @@ class CompanyPage extends StatelessWidget {
                 height: 30,
               ),
               Image.network(
-                  "https://raw.githubusercontent.com/fixxtion/indian-stock-market-predictor/main/predicted_graphs/${symbol}1.png"),
+                  "https://raw.githubusercontent.com/fixxtion/indian-stock-market-predictor/main/model_data/predicted_graphs/${symbol}1.png"),
               SizedBox(
                 height: 30,
               ),
               Image.network(
-                  "https://raw.githubusercontent.com/fixxtion/indian-stock-market-predictor/main/predicted_graphs/${symbol}2.png"),
+                  "https://raw.githubusercontent.com/fixxtion/indian-stock-market-predictor/main/model_data/predicted_graphs/${symbol}2.png"),
               SizedBox(
                 height: 30,
               ),
               Image.network(
-                  "https://raw.githubusercontent.com/fixxtion/indian-stock-market-predictor/main/predicted_graphs/${symbol}3.png"),
+                  "https://raw.githubusercontent.com/fixxtion/indian-stock-market-predictor/main/model_data/predicted_graphs/${symbol}3.png"),
               SizedBox(
                 height: 30,
               ),
