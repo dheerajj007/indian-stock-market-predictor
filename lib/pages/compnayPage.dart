@@ -44,11 +44,6 @@ class CompanyPage extends StatelessWidget {
               SizedBox(
                 height: 30,
               ),
-              Image.network(
-                  "https://raw.githubusercontent.com/fixxtion/indian-stock-market-predictor/main/model_data/predicted_graphs/${symbol}3.png"),
-              SizedBox(
-                height: 30,
-              ),
             ],
           ),
         ),

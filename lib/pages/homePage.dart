@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:indian_stock_market_predictor/pages/compnayPage.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  final following = [];
+
   final stockList = [
     'HINDUNILVR',
     'ZEEL',
@@ -33,7 +40,6 @@ class HomePage extends StatelessWidget {
     'TECHM',
     'TATASTEEL',
     'NESTLEIND',
-    'INFRATEL',
     'ULTRACEMCO',
     'JSWSTEEL',
     'INFY',
@@ -54,6 +60,7 @@ class HomePage extends StatelessWidget {
     'ICICIBANK',
     'EICHERMOT'
   ];
+
   final stockDict = {
     'ADANIPORTS': 'Adani Ports and Special Economic Zone Ltd.',
     'ASIANPAINT': 'Asian Paints Ltd.',
@@ -125,7 +132,10 @@ class HomePage extends StatelessWidget {
           itemCount: stockList.length,
           itemBuilder: (context, index) {
             return ListTile(
-              leading: Icon(Icons.add),
+              leading: CircleAvatar(
+                backgroundImage:
+                    AssetImage("model_data/logos/${stockList[index]}.png"),
+              ),
               title: Text('${stockDict[stockList[index]]}'),
               subtitle: Text('${stockList[index]}'),
               onTap: () {
